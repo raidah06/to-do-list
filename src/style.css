@@ -4,9 +4,9 @@ body{
 }
 
 .content{
-    background-color: blue;
+    background-color:rgb(224, 240, 240);
     display:grid;
-    grid-template:20vh 80vh/25vw 75vw;
+    grid-template:20vh 80vh/25vw 55vw 20vw;
 }
 .title{
     grid-area: 1/1;
@@ -18,7 +18,7 @@ body{
     background-color: rgb(154, 190, 190);
 }
 .header{
-    grid-area: 1/2;
+    grid-area: 1/2/1/4;
     display:flex;
     align-items: center;
     gap:15px;
@@ -50,4 +50,11 @@ button{
     align-items: center;
     justify-content: center;
     background-color: rgb(224, 240, 240);
+}
+#todo-form{
+    grid-area:2/3/2/4;
+
+}
+#todo-form>button{
+    padding:10px;
 }

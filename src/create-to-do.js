@@ -1,5 +1,6 @@
 import {compareAsc,format,parseISO,startOfToday} from 'date-fns'
 import {clearForm} from './dom-manip'
+import {saveToDoToLocal} from './local-storage'
 
 let toDoArray=[]
 
@@ -29,6 +30,7 @@ export const createToDo=()=>{
 
     console.log({Title,Description,DueDate,Priority,CheckList})
 
+    saveToDoToLocal({Title,Description,DueDate,Priority,CheckList})
     clearForm()
 }
 

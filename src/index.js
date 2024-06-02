@@ -1,6 +1,7 @@
 import "./style.css"
 import { projectLoad } from "./project-load"
-import {displayProject,displayForm,addItem,clearform} from './dom-manip.js'
+import {createToDo} from "./create-to-do.js"
+import {displayProject,displayForm,addItem,clearForm} from './dom-manip.js'
 
 //loads project initially
 projectLoad()
@@ -19,4 +20,8 @@ let clickEventsModule=(function(){
     //clear form
     const clearButton=document.querySelector(".reset-button")
     clearButton.addEventListener("click",clearForm)
+
+    //submit new to do
+    const submitButton=document.querySelector(".submit-button")
+    submitButton.addEventListener("click",createToDo)
 })();

@@ -17,7 +17,7 @@ export function addItem(){
     if(addItem!==""){
         const ul=document.querySelector(".todo-ul")
         const li=document.createElement("li")
-        LibraryTemplatePlugin.textContent=addItem
+        li.textContent=addItem
         const span=document.createElement("span")
         span.className="remove-checklist-item"
         const removeIcon=document.createTextNode("\u00D7")
@@ -41,8 +41,8 @@ export function addItem(){
 
 export function clearForm(){
     const nodeListCheckList=document.querySelectorAll("li")
-    for(leti=0;i<nodeListCheckList,length;i++){
+    for(let i=0;i<nodeListCheckList,length;i++){
         nodeListCheckList[i].remove()
     }
-    document.getElementById("add=todo").reset()
+    document.getElementById("add-todo").reset()
 }
